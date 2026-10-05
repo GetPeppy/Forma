@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Autodesk Forma products, bundles, training and support in one place.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Autodesk Forma training and support</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F4; --card:#FFFFFF; --ink:#1C2228; --muted:#5E666E; --rule:#E7E3DB; --tint:#F3F0EA;
+  --yellow:#FFE500; --on-yellow:#1C2228;
+  --dm:#3B6FB6; --dm-s:#EAF1FA; --dc:#B24F6B; --dc-s:#F9ECEF; --pc:#B97A10; --pc-s:#FBF1DF;
+  --mm:#6A58A8; --mm-s:#F0EDF8; --co:#2D8660; --co-s:#E6F4EC;
+  --shadow:0 1px 2px rgba(28,34,40,.05),0 8px 24px rgba(28,34,40,.06);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14171B;--card:#1C2026;--ink:#E9ECEF;--muted:#A3ABB3;--rule:#2C323A;--tint:#22272E;
+  --dm:#7FA8E3;--dm-s:#1D2A3B;--dc:#E58AA3;--dc-s:#35222A;--pc:#E3AE52;--pc-s:#352A17;
+  --mm:#A796E0;--mm-s:#2A2540;--co:#62C295;--co-s:#17302A;--shadow:0 1px 2px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{
+  --bg:#14171B;--card:#1C2026;--ink:#E9ECEF;--muted:#A3ABB3;--rule:#2C323A;--tint:#22272E;
+  --dm:#7FA8E3;--dm-s:#1D2A3B;--dc:#E58AA3;--dc-s:#35222A;--pc:#E3AE52;--pc-s:#352A17;
+  --mm:#A796E0;--mm-s:#2A2540;--co:#62C295;--co-s:#17302A;--shadow:0 1px 2px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Artifakt Element","Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Artifakt Legend","Barlow",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--dm);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.hide{display:none!important}
+.c-dm{--c:var(--dm);--s:var(--dm-s)} .c-dc{--c:var(--dc);--s:var(--dc-s)} .c-pc{--c:var(--pc);--s:var(--pc-s)} .c-mm{--c:var(--mm);--s:var(--mm-s)} .c-co{--c:var(--co);--s:var(--co-s)}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;gap:1.5rem;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;text-decoration:none;font-size:1.05rem}
+.brand i{width:14px;height:14px;background:var(--yellow);border-radius:3px;box-shadow:0 0 0 1.5px var(--ink);display:block}
+.tabs{display:flex;gap:.3rem;margin-left:auto;background:var(--tint);padding:.25rem;border-radius:999px}
+.tabs a{text-decoration:none;font-weight:600;font-size:.95rem;padding:.45rem 1rem;border-radius:999px;color:var(--muted)}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current="page"]{background:var(--ink);color:var(--card)}
+
+.hero{padding:3.5rem 0 1.5rem}
+.eyebrow{display:inline-block;background:var(--yellow);color:var(--on-yellow);font-weight:700;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:6px;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05;margin:0 0 1rem;max-width:20ch}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%);padding:0 .08em}
+:root[data-theme="dark"] .hero h1 em{background:none;color:var(--yellow)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1 em{background:none;color:var(--yellow)}}
+.hero p{color:var(--muted);max-width:42rem;margin:0 0 .4rem;font-size:1.15rem}
+.hero p strong{color:var(--ink)}
+
+section.block{padding:3rem 0 .5rem}
+section.block > h2,.sec-title{font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 .4rem}
+.lede{color:var(--muted);max-width:46rem;margin:0 0 1.6rem}
+.mark{background:linear-gradient(transparent 60%,var(--yellow) 60%);padding:0 .08em}
+:root[data-theme="dark"] .mark{background:none;color:var(--yellow)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mark{background:none;color:var(--yellow)}}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--c,var(--ink));color:#fff;text-decoration:none;padding:.7rem 1.15rem;border-radius:10px;font:inherit;font-size:.97rem;font-weight:700;border:0;cursor:pointer}
+:root[data-theme="dark"] .btn{color:#14171B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#14171B}}
+.btn::after{content:"→"}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--c,var(--ink));box-shadow:inset 0 0 0 2px var(--c,var(--ink))}
+.ext::after{content:" ↗"}
+footer{margin-top:3.5rem;border-top:1px solid var(--rule);color:var(--muted);padding:2rem 0 2.5rem;font-size:.9rem}
+@media (max-width:980px){.tabs{margin-left:0}}
+.notice{display:flex;gap:.9rem;align-items:flex-start;background:var(--card);box-shadow:var(--shadow);border-left:8px solid var(--yellow);border-radius:14px;padding:1rem 1.3rem;margin:1.5rem 0 0;max-width:52rem}
+.notice > b:first-child{font-size:1.3rem;line-height:1.3}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.75rem}
+.filters button{all:unset;cursor:pointer;font-weight:600;font-size:.95rem;padding:.55rem 1rem;border-radius:999px;background:var(--card);box-shadow:var(--shadow);display:inline-flex;align-items:center;gap:.45rem;border:2px solid transparent}
+.filters button::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--c,var(--ink))}
+.filters button:hover{border-color:var(--c,var(--ink))}
+.filters button[aria-pressed="true"]{background:var(--c,var(--ink));color:#fff}
+.filters button[aria-pressed="true"]::before{background:#fff}
+:root[data-theme="dark"] .filters button[aria-pressed="true"]{color:#14171B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .filters button[aria-pressed="true"]{color:#14171B}}
+.tgroup{background:var(--card);border-radius:18px;box-shadow:var(--shadow);margin-bottom:1.4rem;overflow:hidden}
+.tgroup > h3{margin:0;font-size:1.3rem;padding:1.2rem 1.5rem .2rem;display:flex;align-items:center;gap:.7rem;background:var(--s)}
+.tgroup > h3 .ic{width:40px;height:40px;border-radius:11px;background:var(--card);display:grid;place-items:center;font-size:1.2rem}
+.tgroup > p{margin:0;padding:.3rem 1.5rem 1.1rem;color:var(--muted);font-size:.98rem;background:var(--s);border-bottom:3px solid var(--c)}
+.course{display:grid;grid-template-columns:1fr auto;gap:.2rem 1.5rem;align-items:center;padding:1rem 1.5rem;border-top:1px solid var(--rule)}
+.tgroup > p + .course{border-top:0}
+.course a{font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.course a:hover{color:var(--c)}
+.course a::after{content:" ↗";color:var(--c)}
+.course a[href^="#"]::after{content:" ↓"}
+.course p{margin:0;color:var(--muted);font-size:.95rem;grid-column:1}
+.meta{grid-column:2;grid-row:1 / span 2;display:flex;flex-direction:column;align-items:flex-end;gap:.3rem}
+.src{font-size:.75rem;font-weight:700;padding:.2rem .6rem;border-radius:999px;background:var(--tint);color:var(--muted);white-space:nowrap}
+.exp{font-size:.75rem;font-weight:700;background:var(--yellow);color:var(--on-yellow);padding:.2rem .6rem;border-radius:999px;white-space:nowrap}
+.path{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;counter-reset:s}
+.path li{counter-increment:s;background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:1.25rem 1.3rem;border-top:4px solid var(--pc)}
+.path li::before{content:counter(s);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--pc-s);color:var(--pc);font-weight:800;margin-bottom:.6rem}
+.path h4{margin:0 0 .3rem;font-size:1.08rem}
+.path p{margin:0 0 .6rem;color:var(--muted);font-size:.95rem}
+.path a{font-weight:700;font-size:.95rem;color:var(--pc);text-decoration:none}
+.path a:hover{text-decoration:underline}
+.path a::after{content:" ↗"}
+.sources{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.source{background:var(--card);border-radius:18px;box-shadow:var(--shadow);padding:1.5rem}
+.source h3{margin:0 0 .3rem;font-size:1.2rem}
+.source p{margin:0 0 1rem;color:var(--muted)}
+.support{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.sup{background:var(--card);border-radius:16px;box-shadow:var(--shadow);padding:1.3rem;display:flex;flex-direction:column;gap:.45rem;text-decoration:none;border-bottom:4px solid transparent;transition:border-color .15s,transform .15s}
+.sup:hover{border-bottom-color:var(--yellow);transform:translateY(-2px)}
+.sup b{font-size:1.05rem}
+.sup span{color:var(--muted);font-size:.95rem}
+.sup em{font-style:normal;font-weight:700;font-size:.93rem;margin-top:auto}
+.sup em::after{content:" ↗"}
+@media (max-width:980px){.path,.sources,.support{grid-template-columns:1fr}.course{grid-template-columns:1fr}.meta{grid-column:1;grid-row:auto;flex-direction:row;align-items:center}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top"><i aria-hidden="true"></i>Forma Hub</a>
+  <nav class="tabs" aria-label="Pages">
+    <a href="/">Products</a>
+    <a href="#top" aria-current="page">Training &amp; support</a>
+  </nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <span class="eyebrow">Training &amp; support</span>
+  <h1>Learn <em>Autodesk Forma</em>, one product at a time</h1>
+  <p>Free courses, recorded trainings and live help for Forma Data Management, Design Collaboration and the three Forma bundles. Some Autodesk course pages still use the old ACC names.</p>
+  <div class="notice"><b>✨</b><div><b>Updated courses.</b> Autodesk replaced its older combined "Learn in 90 minutes" courses, which retire October 15, 2026, with four new ones. The links below go to the new versions.</div></div>
+</div></div>
+
+<main class="wrap">
+  <section class="block" id="courses">
+    <h2>Training by product</h2>
+    <p class="lede">Choose a product to see only its training, or view everything.</p>
+    <div class="filters" role="group" aria-label="Filter by product">
+      <button data-f="all" aria-pressed="true">All products</button>
+      <button class="c-dm" data-f="dm" aria-pressed="false">Data Management</button>
+      <button class="c-dc" data-f="dc" aria-pressed="false">Design Collaboration</button>
+      <button class="c-pc" data-f="pc" aria-pressed="false">Preconstruction</button>
+      <button class="c-mm" data-f="mm" aria-pressed="false">Model Management</button>
+      <button class="c-co" data-f="co" aria-pressed="false">Construction Ops</button>
+    </div>
+
+    <div class="tgroup c-dm" id="dm" data-g="dm">
+      <h3><span class="ic" aria-hidden="true">📁</span>Forma Data Management</h3>
+      <p>Start here. Every bundle is built on it.</p>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/autodesk-docs" target="_blank" rel="noopener">Forma Data Management learning path</a><div class="meta"><span class="src">Learning Center</span></div><p>Getting Started, Files, Specifications, Reviews and Transmittals.</p></div>
+      <div class="course"><a href="https://www.autodesk.com/learn/ondemand/course/learn-forma-data-management-in-90-minutes" target="_blank" rel="noopener">Learn Forma Data Management in 90 minutes</a><div class="meta"><span class="src">Autodesk Learn</span></div><p>Hands-on course for building a well-organized common data environment. Autodesk recommends starting here.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/all-courses" target="_blank" rel="noopener">Hub and Project Administration</a><div class="meta"><span class="src">Learning Center</span></div><p>Set up projects, members and permissions. Filter the catalog by admin.</p></div>
+    </div>
+
+    <div class="tgroup c-dc" id="dc" data-g="dc">
+      <h3><span class="ic" aria-hidden="true">🤝</span>Forma Design Collaboration</h3>
+      <p>Cloud worksharing, design packages and clash detection.</p>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/bim-collaborate-design-collaboration" target="_blank" rel="noopener">Design Collaboration courses</a><div class="meta"><span class="src">Learning Center</span></div><p>Getting started, teams, packages and issues in Design Collaboration.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/bim-collaborate-model-coordination" target="_blank" rel="noopener">Model Coordination courses</a><div class="meta"><span class="src">Learning Center</span></div><p>Coordination spaces, models and views, clashes and issues.</p></div>
+      <div class="course"><a href="https://www.autodesk.com/learn/ondemand/course/learn-design-collaboration-and-model-coordination-in-90-minutes" target="_blank" rel="noopener">Learn Design Collaboration and Model Coordination in 90 minutes</a><div class="meta"><span class="src">Autodesk Learn</span></div><p>Share design work between teams and coordinate structural and systems models.</p></div>
+    </div>
+
+    <div class="tgroup c-pc" id="pc" data-g="pc">
+      <h3><span class="ic" aria-hidden="true">💰</span>Forma for Preconstruction</h3>
+      <p>BuildingConnected Pro, TradeTapp, Takeoff and estimating. New BC Pro users: follow the step-by-step path below.</p>
+      <div class="course"><a href="#bcpro">BuildingConnected Pro training path</a><div class="meta"><span class="src">6 steps</span></div><p>Tour, core training Parts 1 and 2, TradeTapp and live Q&amp;A.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/preconstruction" target="_blank" rel="noopener">Forma Takeoff learning path</a><div class="meta"><span class="src">Learning Center</span></div><p>2D and 3D takeoff from sheets and models.</p></div>
+      <div class="course"><a href="https://www.autodesk.com/learn/ondemand/collection/autodesk-construction-cloud-education" target="_blank" rel="noopener">Learn Forma Preconstruction (Takeoff and Estimate) in 90 minutes</a><div class="meta"><span class="src">Autodesk Learn</span></div><p>Listed in the construction management collection, under Get started.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/autodesk-takeoff-core-training" target="_blank" rel="noopener">Forma Takeoff Core Training</a><div class="meta"><span class="src">Live monthly</span></div><p>Settings, publishing, packages, 2D and 3D takeoff, and exporting.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/tradetapp-core-training-recorded/1152937" target="_blank" rel="noopener">TradeTapp Core Training</a><div class="meta"><span class="src">Recording</span></div><p>Subcontractor qualification workflow.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/all-courses" target="_blank" rel="noopener">ProEst and Bid Board courses</a><div class="meta"><span class="src">Learning Center</span></div><p>ProEst Quick Start, estimator courses and Bid Board core training.</p></div>
+    </div>
+
+    <div class="tgroup c-mm" id="mm" data-g="mm">
+      <h3><span class="ic" aria-hidden="true">🧊</span>Forma for Model Management</h3>
+      <p>Coordination, reality capture and model data for VDC teams.</p>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/autodesk-bim-collaborate" target="_blank" rel="noopener">Design Collaboration and Model Coordination courses</a><div class="meta"><span class="src">Learning Center</span></div><p>Core cloud coordination workflows in the bundle.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/insight" target="_blank" rel="noopener">Insight courses</a><div class="meta"><span class="src">Learning Center</span></div><p>Dashboards and project analytics.</p></div>
+      <div class="course"><a href="https://www.autodesk.com/learn/ondemand/course/learn-design-collaboration-and-model-coordination-in-90-minutes" target="_blank" rel="noopener">Design Collaboration and Model Coordination in 90 minutes</a><div class="meta"><span class="src">Autodesk Learn</span></div><p>Hands-on model coordination workflows.</p></div>
+      <div class="course"><a href="https://www.autodesk.com/learn/ondemand/collection/autodesk-construction-cloud-education" target="_blank" rel="noopener">Construction management collection</a><div class="meta"><span class="src">Autodesk Learn</span></div><p>Includes an introduction to BIM for AECO.</p></div>
+    </div>
+
+    <div class="tgroup c-co" id="co" data-g="co">
+      <h3><span class="ic" aria-hidden="true">🦺</span>Forma for Construction Operations</h3>
+      <p>Forma Build, AutoSpecs, closeout and the mobile app.</p>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/run-the-jobsite" target="_blank" rel="noopener">Run the Jobsite learning path</a><div class="meta"><span class="src">Learning Center</span></div><p>Forma Build basics for PMs, supers and field teams.</p></div>
+      <div class="course"><a href="https://www.autodesk.com/learn/ondemand/course/learn-forma-build-in-90-minutes" target="_blank" rel="noopener">Learn Forma Build in 90 minutes</a><div class="meta"><span class="src">Autodesk Learn</span></div><p>Drawings, models and specs in Forma Build, project communication and Cost Management budgets.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/autodesk-build" target="_blank" rel="noopener">Forma Build and Cost Management courses</a><div class="meta"><span class="src">Learning Center</span></div><p>Includes core training recordings for issues, RFIs, submittals and cost.</p></div>
+      <div class="course"><a href="https://learnacc.autodesk.com/page/autospecs" target="_blank" rel="noopener">AutoSpecs courses</a><div class="meta"><span class="src">Learning Center</span></div><p>Uploading specs, submittal logs and product data.</p></div>
+      <div class="course"><a href="https://construction.autodesk.com/products/construction-app/" target="_blank" rel="noopener">Forma mobile app</a><div class="meta"><span class="src">Product page</span></div><p>What the field app does and how to get it.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="bcpro" data-g="pc">
+    <h2>BuildingConnected Pro training path</h2>
+    <p class="lede">Six steps, in order. The core training is two one-hour recordings.</p>
+    <ol class="path">
+      <li><h4>Take the product tour</h4><p>A quick walk through bid management, leveling and qualification.</p><a href="https://construction.autodesk.com/product-tour/buildingconnected-pro-product-tour/" target="_blank" rel="noopener">Start the tour</a></li>
+      <li><h4>Core Training, Part 1</h4><p>Profiles, projects, bid packages, inviting bidders, bid forms and calendar sync.</p><a href="https://learnacc.autodesk.com/buildingconnected-core-training-part-1-recorded/998870" target="_blank" rel="noopener">Watch Part 1</a></li>
+      <li><h4>Core Training, Part 2</h4><p>The second one-hour recorded session.</p><a href="https://learnacc.autodesk.com/buildingconnected-core-training-part-2-recorded/998890" target="_blank" rel="noopener">Watch Part 2</a></li>
+      <li><h4>Qualify subs with TradeTapp</h4><p>If your team prequalifies subcontractors.</p><a href="https://learnacc.autodesk.com/tradetapp-core-training-recorded/1152937" target="_blank" rel="noopener">TradeTapp training</a></li>
+      <li><h4>Connect bids to documents</h4><p>Carry bid files into the project with Data Management.</p><a href="https://construction.autodesk.com/resources/source-acc-webinars/buildingconnected-pro-and-autodesk-docs-connected-document-management-from-bidding-to-construction-5/" target="_blank" rel="noopener">Watch the webinar</a></li>
+      <li><h4>Ask the Experts</h4><p>Live monthly Q&amp;A with Autodesk consultants. Finish core training first.</p><a href="https://constructioncloud.autodesk.com/Ask-the-Experts-Preconstruction.html" target="_blank" rel="noopener">Register</a></li>
+    </ol>
+  </section>
+
+  <section class="block" id="sources">
+    <h2>Where the training lives</h2>
+    <p class="lede">Two free Autodesk learning libraries cover Forma.</p>
+    <div class="sources">
+      <div class="source c-dm"><h3>🎓 Autodesk Learning Center</h3><p>Short, role-based courses and learning paths, plus recordings of live core trainings.</p><a class="btn" href="https://learnacc.autodesk.com/" target="_blank" rel="noopener">Open Learning Center</a></div>
+      <div class="source c-mm"><h3>▶️ Autodesk Learn</h3><p>Longer self-paced courses and collections, including the construction management series.</p><a class="btn" href="https://www.autodesk.com/learn/ondemand/collection/autodesk-construction-cloud-education" target="_blank" rel="noopener">Open Autodesk Learn</a></div>
+    </div>
+  </section>
+
+  <section class="block" id="support">
+    <h2>Get help</h2>
+    <p class="lede">Stuck on something? Start with the option that matches your question.</p>
+    <div class="support">
+      <a class="sup" href="https://constructioncloud.autodesk.com/Ask-the-Experts-Preconstruction.html" target="_blank" rel="noopener"><b>Ask the Experts</b><span>Live Q&amp;A with Autodesk implementation consultants for BuildingConnected, TradeTapp and Takeoff.</span><em>Register</em></a>
+      <a class="sup" href="https://help.autodesk.com/view/BUILD/ENU/" target="_blank" rel="noopener"><b>Forma help site</b><span>Official how-to articles, system requirements and a Contact Support page.</span><em>Open help</em></a>
+      <a class="sup" href="https://www.autodesk.com/support" target="_blank" rel="noopener"><b>Autodesk Support</b><span>Contact support, manage cases and account questions.</span><em>Get support</em></a>
+      <a class="sup" href="https://forums.autodesk.com/t5/forma-for-construction-forum/bd-p/acc-general-discussion-forum-en" target="_blank" rel="noopener"><b>Forma for Construction forum</b><span>Ask other users and Autodesk staff. Formerly the ACC forum.</span><em>Visit forums</em></a>
+      <a class="sup" href="https://health.autodesk.com/" target="_blank" rel="noopener"><b>Service status</b><span>Check whether a Forma service is having an outage.</span><em>Check status</em></a>
+      <a class="sup" href="https://learnacc.autodesk.com/page/faqs" target="_blank" rel="noopener"><b>Learning Center FAQs</b><span>Finding courses, transcripts and older BIM 360 history.</span><em>Read FAQs</em></a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Links checked October 5, 2026. Looking for product details? <a href="/">Go to Products</a>. Autodesk, Forma and related names are trademarks of Autodesk, Inc.</div></footer>
+
+<script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.filters button'));
+  var groups=[].slice.call(document.querySelectorAll('[data-g]'));
+  function set(f){
+    btns.forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.f===f))});
+    groups.forEach(function(g){g.classList.toggle('hide',f!=='all'&&g.dataset.g!==f)});
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.f)})});
+  var h=(location.hash||'').slice(1);
+  if(['dm','dc','pc','mm','co'].indexOf(h)>-1){set(h);var el=document.getElementById(h);if(el)el.scrollIntoView();}
+})();
+</script>
+</body>
+</html>

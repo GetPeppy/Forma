@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Autodesk Forma products, bundles, training and support in one place.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Autodesk Forma products</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏗️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F4; --card:#FFFFFF; --ink:#1C2228; --muted:#5E666E; --rule:#E7E3DB; --tint:#F3F0EA;
+  --yellow:#FFE500; --on-yellow:#1C2228;
+  --dm:#3B6FB6; --dm-s:#EAF1FA; --dc:#B24F6B; --dc-s:#F9ECEF; --pc:#B97A10; --pc-s:#FBF1DF;
+  --mm:#6A58A8; --mm-s:#F0EDF8; --co:#2D8660; --co-s:#E6F4EC;
+  --shadow:0 1px 2px rgba(28,34,40,.05),0 8px 24px rgba(28,34,40,.06);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14171B;--card:#1C2026;--ink:#E9ECEF;--muted:#A3ABB3;--rule:#2C323A;--tint:#22272E;
+  --dm:#7FA8E3;--dm-s:#1D2A3B;--dc:#E58AA3;--dc-s:#35222A;--pc:#E3AE52;--pc-s:#352A17;
+  --mm:#A796E0;--mm-s:#2A2540;--co:#62C295;--co-s:#17302A;--shadow:0 1px 2px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{
+  --bg:#14171B;--card:#1C2026;--ink:#E9ECEF;--muted:#A3ABB3;--rule:#2C323A;--tint:#22272E;
+  --dm:#7FA8E3;--dm-s:#1D2A3B;--dc:#E58AA3;--dc-s:#35222A;--pc:#E3AE52;--pc-s:#352A17;
+  --mm:#A796E0;--mm-s:#2A2540;--co:#62C295;--co-s:#17302A;--shadow:0 1px 2px rgba(0,0,0,.35)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Artifakt Element","Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:1.1rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Artifakt Legend","Barlow",system-ui,sans-serif;font-weight:700;letter-spacing:-.01em;line-height:1.2}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--dm);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+.hide{display:none!important}
+.c-dm{--c:var(--dm);--s:var(--dm-s)} .c-dc{--c:var(--dc);--s:var(--dc-s)} .c-pc{--c:var(--pc);--s:var(--pc-s)} .c-mm{--c:var(--mm);--s:var(--mm-s)} .c-co{--c:var(--co);--s:var(--co-s)}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;gap:1.5rem;min-height:64px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:700;text-decoration:none;font-size:1.05rem}
+.brand i{width:14px;height:14px;background:var(--yellow);border-radius:3px;box-shadow:0 0 0 1.5px var(--ink);display:block}
+.tabs{display:flex;gap:.3rem;margin-left:auto;background:var(--tint);padding:.25rem;border-radius:999px}
+.tabs a{text-decoration:none;font-weight:600;font-size:.95rem;padding:.45rem 1rem;border-radius:999px;color:var(--muted)}
+.tabs a:hover{color:var(--ink)}
+.tabs a[aria-current="page"]{background:var(--ink);color:var(--card)}
+
+.hero{padding:3.5rem 0 1.5rem}
+.eyebrow{display:inline-block;background:var(--yellow);color:var(--on-yellow);font-weight:700;font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;padding:.2rem .6rem;border-radius:6px;margin-bottom:1rem}
+.hero h1{font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.05;margin:0 0 1rem;max-width:20ch}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%);padding:0 .08em}
+:root[data-theme="dark"] .hero h1 em{background:none;color:var(--yellow)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1 em{background:none;color:var(--yellow)}}
+.hero p{color:var(--muted);max-width:42rem;margin:0 0 .4rem;font-size:1.15rem}
+.hero p strong{color:var(--ink)}
+
+section.block{padding:3rem 0 .5rem}
+section.block > h2,.sec-title{font-size:clamp(1.6rem,3vw,2.1rem);margin:0 0 .4rem}
+.lede{color:var(--muted);max-width:46rem;margin:0 0 1.6rem}
+.mark{background:linear-gradient(transparent 60%,var(--yellow) 60%);padding:0 .08em}
+:root[data-theme="dark"] .mark{background:none;color:var(--yellow)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .mark{background:none;color:var(--yellow)}}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--c,var(--ink));color:#fff;text-decoration:none;padding:.7rem 1.15rem;border-radius:10px;font:inherit;font-size:.97rem;font-weight:700;border:0;cursor:pointer}
+:root[data-theme="dark"] .btn{color:#14171B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#14171B}}
+.btn::after{content:"→"}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--c,var(--ink));box-shadow:inset 0 0 0 2px var(--c,var(--ink))}
+.ext::after{content:" ↗"}
+footer{margin-top:3.5rem;border-top:1px solid var(--rule);color:var(--muted);padding:2rem 0 2.5rem;font-size:.9rem}
+@media (max-width:980px){.tabs{margin-left:0}}
+.picker{padding:.5rem 0 1rem}
+.picker .panel{background:var(--card);border-radius:20px;box-shadow:var(--shadow);padding:1.6rem}
+.picker h2{font-size:1.35rem;margin:0 0 .3rem}
+.picker .sub{color:var(--muted);margin:0 0 1.1rem;font-size:1rem}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}
+.role{all:unset;box-sizing:border-box;cursor:pointer;border-radius:14px;background:var(--tint);padding:1rem 1.1rem;display:flex;gap:.85rem;align-items:center;border:2px solid transparent;transition:border-color .15s,background .15s,transform .15s}
+.role:hover{border-color:var(--c);transform:translateY(-2px)}
+.role .n{font-size:1.4rem;width:44px;height:44px;border-radius:12px;background:var(--s);display:grid;place-items:center;flex:none}
+.role b{font-weight:600;font-size:1rem;line-height:1.35}
+.role[aria-pressed="true"]{background:var(--s);border-color:var(--c)}
+.role[aria-pressed="true"] .n{background:var(--c)}
+.placeholder{color:var(--muted);margin:1.1rem 0 0;font-size:.97rem}
+.answer{margin-top:1.25rem;border-radius:16px;border:2px solid var(--c);display:grid;grid-template-columns:1.35fr 1fr;overflow:hidden}
+.answer > div{padding:1.5rem 1.6rem}
+.answer .kicker{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c);margin:0 0 .3rem}
+.answer h3{font-size:1.6rem;margin:0 0 .6rem}
+.answer p{margin:0 0 .9rem}
+.answer ul{margin:0 0 1.1rem;padding-left:1.2rem}
+.answer li{margin:.25rem 0}
+.answer .side{background:var(--s);padding:1.5rem 1.6rem}
+.answer .side h4{margin:0 0 .35rem;font-size:1rem}
+.answer .side p{font-size:.97rem;color:var(--ink);margin:0 0 1rem}
+.answer .row{display:flex;gap:.6rem;flex-wrap:wrap}
+
+.prods{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.prods.three{grid-template-columns:repeat(3,1fr)}
+.pc{background:var(--card);border-radius:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.pc .top{padding:1.3rem 1.4rem 1.1rem;background:var(--s);border-bottom:3px solid var(--c)}
+.pc .ic{width:46px;height:46px;border-radius:12px;background:var(--card);display:grid;place-items:center;font-size:1.4rem;margin-bottom:.7rem}
+.pc .tag{display:inline-block;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--c);margin-bottom:.2rem}
+.pc h3{margin:0;font-size:1.3rem}
+.pc .was{color:var(--muted);font-size:.88rem;margin-top:.15rem}
+.pc .bd{padding:1.2rem 1.4rem 1.4rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
+.pc .bd p{margin:0;font-size:1rem}
+.pc .lbl{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 .4rem}
+.pc ul.feat{margin:0;padding-left:1.15rem;font-size:.98rem}
+.pc ul.feat li{margin:.2rem 0}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem}
+.chips li{font-size:.85rem;padding:.2rem .65rem;border-radius:999px;background:var(--tint)}
+.chips li.core{background:var(--yellow);color:var(--on-yellow);font-weight:600}
+.pc .who{font-size:.92rem;color:var(--muted)}
+.pc .who b{color:var(--ink)}
+.pc .note{font-size:.88rem;color:var(--muted);background:var(--tint);border-radius:10px;padding:.6rem .8rem;margin:0}
+.pc .foot{margin-top:auto;display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;padding-top:.3rem}
+.pc .foot a{font-weight:600;font-size:.95rem;color:var(--c)}
+
+.matrix-wrap{overflow-x:auto;background:var(--card);border-radius:18px;box-shadow:var(--shadow)}
+table.matrix{border-collapse:collapse;width:100%;min-width:640px;font-size:.98rem}
+.matrix th,.matrix td{padding:.65rem 1rem;border-bottom:1px solid var(--rule);text-align:center}
+.matrix th:first-child,.matrix td:first-child{text-align:left}
+.matrix thead th{font-weight:700;font-size:.92rem;padding-top:1rem;border-bottom:2px solid var(--rule)}
+.matrix thead th span{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:.4rem}
+.matrix tbody tr:hover{background:var(--tint)}
+.matrix .grp td{font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--tint)}
+.yes{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--co-s);color:var(--co);font-weight:800;font-size:.9rem}
+.part{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;border:2px dashed var(--muted);color:var(--muted);font-size:.8rem;font-weight:700}
+.legend{font-size:.9rem;color:var(--muted);margin-top:.8rem;display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.legend > span{display:inline-flex;gap:.45rem;align-items:center}
+
+.cta{margin-top:3rem;background:var(--card);box-shadow:var(--shadow);border-radius:20px;border-left:8px solid var(--yellow);padding:1.8rem 2rem;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.cta h2{margin:0;font-size:1.5rem}
+.cta p{margin:.3rem 0 0;color:var(--muted)}
+@media (max-width:980px){.roles{grid-template-columns:1fr 1fr}.answer{grid-template-columns:1fr}.prods,.prods.three{grid-template-columns:1fr}}
+@media (max-width:520px){.roles{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#top"><i aria-hidden="true"></i>Forma Hub</a>
+  <nav class="tabs" aria-label="Pages">
+    <a href="#top" aria-current="page">Products</a>
+    <a href="/training">Training &amp; support</a>
+  </nav>
+</div></header>
+
+<div class="hero" id="top"><div class="wrap">
+  <span class="eyebrow">Products</span>
+  <h1>Find the right <em>Autodesk Forma</em> tools for your work</h1>
+  <p>Autodesk Construction Cloud became Autodesk Forma on <strong>March 24, 2026</strong>. The names changed; your projects, permissions and logins didn't.</p>
+</div></div>
+
+<div class="picker"><div class="wrap"><div class="panel">
+  <h2>What do you do?</h2>
+  <p class="sub">Pick the one that sounds most like you.</p>
+  <div class="roles" role="group" aria-label="Choose your role">
+    <button class="role c-dm" data-role="docs" aria-pressed="false"><span class="n" aria-hidden="true">📁</span><b>I manage drawings, documents and project files</b></button>
+    <button class="role c-dc" data-role="design" aria-pressed="false"><span class="n" aria-hidden="true">🤝</span><b>I design in Revit and share models with other teams</b></button>
+    <button class="role c-pc" data-role="precon" aria-pressed="false"><span class="n" aria-hidden="true">💰</span><b>I bid, estimate or buy out work</b></button>
+    <button class="role c-mm" data-role="vdc" aria-pressed="false"><span class="n" aria-hidden="true">🧊</span><b>I coordinate models, run clash detection or handle VDC</b></button>
+    <button class="role c-co" data-role="field" aria-pressed="false"><span class="n" aria-hidden="true">🦺</span><b>I manage projects or work in the field</b></button>
+    <button class="role c-pc" data-role="owner" aria-pressed="false"><span class="n" aria-hidden="true">🏢</span><b>I'm an owner or developer running projects</b></button>
+  </div>
+  <p class="placeholder" id="ph">We'll show you which Forma product fits and where to start.</p>
+  <div class="answer hide" id="answer" aria-live="polite"></div>
+</div></div></div>
+
+<main class="wrap">
+  <section class="block" id="modules">
+    <h2 class="sec-title">Core modules</h2>
+    <p class="lede"><span class="mark">Forma Data Management</span> is the foundation of every bundle. Design Collaboration builds cloud worksharing and coordination on top of it.</p>
+    <div class="prods">
+      <article class="pc c-dm" id="p-dm">
+        <div class="top"><div class="ic" aria-hidden="true">📁</div><span class="tag">Foundation</span><h3>Forma Data Management</h3><div class="was">Formerly Autodesk Docs</div></div>
+        <div class="bd">
+          <p>One connected place for every sheet, model and document on a project, so every team works from the current set through every phase.</p>
+          <div><p class="lbl">What you can do</p><ul class="feat"><li>Store and organize drawings, models and documents</li><li>View 2D and 3D models in the browser</li><li>Compare versions and mark up sheets</li><li>Track issues and control permissions by folder</li></ul></div>
+          <div class="who"><b>Who uses it:</b> everyone on the project.</div>
+          <p class="note">An Essentials tier comes with AutoCAD, Revit, Civil 3D and the PD&amp;M Collection, and it's included in all three bundles.</p>
+          <div class="foot"><a class="ext" href="https://www.autodesk.com/blogs/construction/autodesk-construction-cloud-is-now-forma/" target="_blank" rel="noopener">Autodesk naming guide</a></div>
+        </div>
+      </article>
+      <article class="pc c-dc" id="p-dc">
+        <div class="top"><div class="ic" aria-hidden="true">🤝</div><span class="tag">Design</span><h3>Forma Design Collaboration</h3><div class="was">Formerly BIM Collaborate Pro</div></div>
+        <div class="bd">
+          <p>Cloud worksharing for Revit, plus tools to share design packages between teams on a timeline and resolve clashes before they reach the site.</p>
+          <div><p class="lbl">What you can do</p><ul class="feat"><li>Co-author Revit models in the cloud</li><li>Publish and consume design packages between teams</li><li>Run automatic clash detection with Model Coordination</li><li>Track design changes across disciplines</li></ul></div>
+          <div class="who"><b>Who uses it:</b> architects, engineers, BIM and VDC teams.</div>
+          <p class="note">Included in Forma for Model Management.</p>
+          <div class="foot"><a class="ext" href="https://www.autodesk.com/products/forma-model-management/overview" target="_blank" rel="noopener">Model Management overview</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="bundles">
+    <h2 class="sec-title">Forma bundles</h2>
+    <p class="lede">Each bundle packages several products at one price. Products in yellow are the core modules above.</p>
+    <div class="prods three">
+      <article class="pc c-pc" id="p-pc">
+        <div class="top"><div class="ic" aria-hidden="true">💰</div><span class="tag">Bundle</span><h3>Forma for Preconstruction</h3><div class="was">Formerly the Preconstruction Bundle</div></div>
+        <div class="bd">
+          <p>Find bidders, level bids, qualify subcontractors and build estimates, so you win more work with less risk.</p>
+          <div><p class="lbl">Included</p><ul class="chips"><li class="core">Data Management</li><li>BuildingConnected Pro</li><li>Bid Board Pro</li><li>TradeTapp</li><li>Forma Takeoff</li><li>Forma Estimate</li><li>ProEst</li></ul></div>
+          <div><p class="lbl">Key products</p><ul class="feat"><li><b>BuildingConnected Pro:</b> bid management with the Builders Network, unlimited invites and bid leveling</li><li><b>TradeTapp:</b> subcontractor qualification</li><li><b>Takeoff, Estimate, ProEst:</b> quantities and pricing</li></ul></div>
+          <div class="who"><b>Who uses it:</b> estimators, precon managers, owners.</div>
+          <p class="note">Bundle contents can vary by contract. Confirm with your Autodesk rep.</p>
+          <div class="foot"><a class="ext" href="https://construction.autodesk.com/products/bundles/forma-preconstruction/" target="_blank" rel="noopener">Bundle overview</a><a class="ext" href="https://construction.autodesk.com/pricing/buildingconnected/" target="_blank" rel="noopener">Pricing</a></div>
+        </div>
+      </article>
+      <article class="pc c-mm" id="p-mm">
+        <div class="top"><div class="ic" aria-hidden="true">🧊</div><span class="tag">Bundle</span><h3>Forma for Model Management</h3><div class="was">Formerly the Model Management Bundle</div></div>
+        <div class="bd">
+          <p>Desktop and cloud coordination for VDC: construction-ready models, reality capture, and a digital twin at handover.</p>
+          <div><p class="lbl">Included</p><ul class="chips"><li class="core">Data Management</li><li class="core">Design Collaboration</li><li>Model Coordination</li><li>Navisworks Manage</li><li>ReCap Pro</li><li>Assemble</li><li>Tandem Essentials</li><li>Point Layout</li><li>Insight</li></ul></div>
+          <div><p class="lbl">Key products</p><ul class="feat"><li><b>Navisworks Manage:</b> desktop coordination and simulation</li><li><b>ReCap Pro:</b> laser scans and photos to 3D</li><li><b>Assemble:</b> conditions BIM data for estimating and scheduling</li><li><b>Tandem Essentials:</b> digital twin handover</li></ul></div>
+          <div class="who"><b>Who uses it:</b> VDC managers, BIM coordinators, trade modelers.</div>
+          <p class="note">Bundle contents can vary by contract and region. Confirm with your Autodesk rep.</p>
+          <div class="foot"><a class="ext" href="https://www.autodesk.com/products/forma-model-management/overview" target="_blank" rel="noopener">Bundle overview</a><a class="ext" href="https://construction.autodesk.com/pricing/model-management/" target="_blank" rel="noopener">Pricing</a></div>
+        </div>
+      </article>
+      <article class="pc c-co" id="p-co">
+        <div class="top"><div class="ic" aria-hidden="true">🦺</div><span class="tag">Bundle</span><h3>Forma for Construction Operations</h3><div class="was">Formerly the Construction Operations Bundle</div></div>
+        <div class="bd">
+          <p>Run the job from kickoff to closeout, with AI help drafting RFIs, building submittal logs and reviewing specs.</p>
+          <div><p class="lbl">Included</p><ul class="chips"><li class="core">Data Management</li><li>Forma Build</li><li>AutoSpecs</li><li>Pype Closeout</li><li>Construction Connect</li></ul></div>
+          <div><p class="lbl">Key products</p><ul class="feat"><li><b>Forma Build:</b> field, project and cost management</li><li><b>AutoSpecs:</b> submittal logs generated from specs</li><li><b>Pype Closeout:</b> turnover packages</li><li><b>Construction Connect:</b> no-code links to business apps</li></ul></div>
+          <div class="who"><b>Who uses it:</b> PMs, superintendents, project engineers, field crews.</div>
+          <div class="foot"><a class="ext" href="https://construction.autodesk.com/products/bundles/forma-construction-operations/" target="_blank" rel="noopener">Bundle overview</a><a class="ext" href="https://construction.autodesk.com/pricing/construction-operations/" target="_blank" rel="noopener">Pricing</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="compare">
+    <h2 class="sec-title">What's in each bundle</h2>
+    <p class="lede">A side-by-side view of which products come with which bundle.</p>
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead><tr><th scope="col">Product</th><th scope="col" class="c-pc"><span></span>Preconstruction</th><th scope="col" class="c-mm"><span></span>Model Management</th><th scope="col" class="c-co"><span></span>Construction Ops</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="4">Core</td></tr>
+          <tr><td>Forma Data Management</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Forma Design Collaboration</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr class="grp"><td colspan="4">Preconstruction</td></tr>
+          <tr><td>BuildingConnected Pro</td><td><span class="yes">✓</span></td><td></td><td></td></tr>
+          <tr><td>Bid Board Pro</td><td><span class="yes">✓</span></td><td></td><td></td></tr>
+          <tr><td>TradeTapp</td><td><span class="yes">✓</span></td><td></td><td></td></tr>
+          <tr><td>Forma Takeoff</td><td><span class="yes">✓</span></td><td></td><td></td></tr>
+          <tr><td>Forma Estimate</td><td><span class="yes">✓</span></td><td></td><td></td></tr>
+          <tr><td>ProEst</td><td><span class="yes">✓</span></td><td></td><td></td></tr>
+          <tr class="grp"><td colspan="4">Coordination and VDC</td></tr>
+          <tr><td>Model Coordination</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr><td>Navisworks Manage</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr><td>ReCap Pro</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr><td>Assemble</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr><td>Tandem Essentials</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr><td>Point Layout</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr><td>Insight</td><td></td><td><span class="yes">✓</span></td><td></td></tr>
+          <tr class="grp"><td colspan="4">Construction and closeout</td></tr>
+          <tr><td>Forma Build</td><td></td><td></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>AutoSpecs</td><td></td><td></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Pype Closeout</td><td></td><td></td><td><span class="yes">✓</span></td></tr>
+          <tr><td>Forma Construction Connect</td><td></td><td></td><td><span class="yes">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="legend"><span><span class="yes">✓</span> Included</span><span>Bundle contents can vary by contract and region; confirm with your Autodesk rep.</span></div>
+  </section>
+
+  <div class="cta">
+    <div><h2>Ready to learn?</h2><p>Courses, recorded trainings and support for every product on this page.</p></div>
+    <a class="btn" style="--c:var(--ink)" href="/training">Go to training &amp; support</a>
+  </div>
+</main>
+
+<footer><div class="wrap">Product information checked October 5, 2026 against Autodesk's Forma bundle and pricing pages. Autodesk, Forma and related names are trademarks of Autodesk, Inc.</div></footer>
+
+<script>
+var ROLES={
+  docs:{kick:"Your best fit",name:"Forma Data Management",why:"It's where every drawing, model and document lives, with version control and permissions so everyone works from the current set.",use:["Upload, organize and publish sheets and models","Compare versions and mark up drawings","Control who sees what, folder by folder","Track issues tied to specific locations on a sheet"],bundle:"Included in all three bundles, and an Essentials tier comes with AutoCAD, Revit and Civil 3D.",also:"If you also manage RFIs and submittals, look at Forma for Construction Operations.",anchor:"p-dm",train:"#dm"},
+  design:{kick:"Your best fit",name:"Forma Design Collaboration",why:"It lets your Revit team co-author models in the cloud and share packages with consultants on a controlled timeline.",use:["Cloud worksharing for Revit models","Publish and consume design packages between firms","Compare changes between package versions","Clash detection through Model Coordination"],bundle:"Included in Forma for Model Management, which also adds Navisworks, ReCap Pro and more.",also:"Everything you share lives in Forma Data Management.",anchor:"p-dc",train:"#dc"},
+  precon:{kick:"Your best fit",name:"Forma for Preconstruction",why:"It brings bidding, sub qualification, takeoff and estimating together, so you can go from invite to award in one connected set of tools.",use:["BuildingConnected Pro to invite bidders and level bids","TradeTapp to qualify subcontractors","Forma Takeoff for 2D and 3D quantities","ProEst and Forma Estimate for pricing"],bundle:"Includes Forma Data Management so bid documents carry into the project.",also:"Subcontractor? Bid Board Pro is the sub-side tool in the same bundle.",anchor:"p-pc",train:"#pc"},
+  vdc:{kick:"Your best fit",name:"Forma for Model Management",why:"It combines cloud and desktop coordination tools, from automatic clash detection to Navisworks, reality capture and digital twin handover.",use:["Model Coordination for automatic clash detection","Navisworks Manage for detailed coordination and 4D","ReCap Pro to bring scans into your models","Assemble to condition model data for estimating and scheduling"],bundle:"Includes Forma Design Collaboration and Forma Data Management.",also:"Handing over to an owner? Tandem Essentials is included for digital twins.",anchor:"p-mm",train:"#mm"},
+  field:{kick:"Your best fit",name:"Forma for Construction Operations",why:"It covers daily project management and field work, with AI tools that speed up RFIs, submittal logs and spec reviews.",use:["Forma Build for RFIs, submittals, issues, photos and cost","AutoSpecs to generate a submittal log from the specs","Pype Closeout to assemble turnover packages","The Forma mobile app on site"],bundle:"Includes Forma Data Management for drawings and documents.",also:"Construction Connect links Forma to your other business apps without code.",anchor:"p-co",train:"#co"},
+  owner:{kick:"A good starting point",name:"Forma Data Management and BuildingConnected Pro",why:"Owners typically need one source of truth for project documents, and BuildingConnected Pro supports owner-led bidding as well as GC bid management.",use:["Forma Data Management for a single record of every project","BuildingConnected Pro to run bids and compare responses","TradeTapp to qualify contractors","Tandem Essentials (Model Management) for digital twin operations"],bundle:"BuildingConnected Pro comes in Forma for Preconstruction, which also includes Data Management.",also:"Want the as-built model after handover? See Forma for Model Management.",anchor:"p-pc",train:"#pc"}
+};
+var TRAIN="/training";
+var ans=document.getElementById('answer'),ph=document.getElementById('ph');
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+document.querySelectorAll('.role').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.role').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');
+    var r=ROLES[b.dataset.role];
+    ans.innerHTML='<div><p class="kicker">'+r.kick+'</p><h3>'+esc(r.name)+'</h3><p>'+esc(r.why)+'</p><p class="kicker">What you\'ll use</p><ul>'+r.use.map(function(u){return '<li>'+esc(u)+'</li>'}).join('')+'</ul><div class="row"><a class="btn" href="#'+r.anchor+'">See product details</a><a class="btn ghost" href="'+TRAIN+r.train+'">See training</a></div></div><aside class="side"><h4>How to get it</h4><p>'+esc(r.bundle)+'</p><h4>Also worth a look</h4><p>'+esc(r.also)+'</p></aside>';
+    ans.className='answer c-'+r.anchor.slice(2);ph.classList.add('hide');
+  });
+});
+</script>
+</body>
+</html>
